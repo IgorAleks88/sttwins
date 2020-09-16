@@ -17,13 +17,15 @@ function showHeroes(jsonObj) {
   }
 }
 function persFind() {
-  // let requestURL = "data.json";
-  //let request = new XMLHttpRequest();
-  // request.open("GET", requestURL);
-  // request.responseType = "json";
-  /// request.send();
-  // request.onload = function () {
-  // let addressBook = request.response;
-  let addressBook = JSON.parse(data.json);
-  showHeroes(addressBook);
+  //  let requestURL = "https://api.jsonbin.io/b/5f61c92e302a837e95674445";
+  let requestURL = "https://sttwinscrack.netlify.app/data.json";
+  let request = new XMLHttpRequest();
+  request.open("GET", requestURL);
+  request.responseType = "json";
+  request.send();
+  request.onload = function () {
+    let addressBook = request.response;
+    //let addressBook = JSON.parse(data.json);
+    showHeroes(addressBook);
+  };
 }
