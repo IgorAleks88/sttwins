@@ -1,0 +1,11 @@
+#main-table {
+  border: 2px;
+  border-color: black;
+  border-style: solid;
+}
+
+.cell {
+  border: 2px;
+  border-color: black;
+  border-style: solid;
+}
